@@ -52,7 +52,7 @@ if st.button("Generate Content", type="primary"):
             with st.spinner("Generating content..."):
                 response = client.chat.completions.create(
                     messages=[{"role": "user", "content": prompt}],
-                    model="llama-3.3-70b-versatile"
+                    model="openai/gpt-oss-120b"
                 )
                 
                 generated_text = response.choices[0].message.content
